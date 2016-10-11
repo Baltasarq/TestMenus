@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo cmi)
     {
         if ( view.getId() == R.id.edOp1
-                || view.getId() == R.id.edOp2
-                || view.getId() == R.id.edResultado )
+          || view.getId() == R.id.edOp2
+          || view.getId() == R.id.edResultado )
         {
             this.getMenuInflater().inflate( R.menu.context_menu, contextMenu );
             contextMenu.setHeaderTitle( R.string.app_name );
