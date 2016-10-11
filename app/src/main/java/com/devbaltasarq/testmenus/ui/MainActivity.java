@@ -17,12 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate( savedInstanceState);
+        setContentView( R.layout.activity_main );
 
         EditText edOp1 = (EditText) this.findViewById( R.id.edOp1 );
         EditText edOp2 = (EditText) this.findViewById( R.id.edOp2 );
-        TextView edResultado = (TextView) this.findViewById( R.id.edResultado );
 
         this.registerForContextMenu( edOp1 );
         this.registerForContextMenu( edOp2 );
@@ -32,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo cmi)
     {
         if ( view.getId() == R.id.edOp1
-          || view.getId() == R.id.edOp2
-          || view.getId() == R.id.edResultado )
+          || view.getId() == R.id.edOp2 )
         {
             this.getMenuInflater().inflate( R.menu.context_menu, contextMenu );
             contextMenu.setHeaderTitle( R.string.app_name );
